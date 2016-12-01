@@ -1,23 +1,5 @@
-;CSE 413 AU
-;Perkins
 ;Eric Eckert
-;Hw 4
-
-
 #lang racket
-(provide take)
-(provide combm)
-(provide red-blue)
-
-;stream red-blue function pair
-(define red-blue (lambda () (cons "red" blue-red)))
-(define blue-red (lambda () (cons "blue" red-blue)))
-
-;takes the first n elements of a stream
-(define (take st n)
-  (if (= n 0)
-      '()
-      (cons (car (st)) (take (cdr (st)) (- n 1)))))
 
 ; calculates the combination of n and k using a memo to store previously calculated value
 (define combm
